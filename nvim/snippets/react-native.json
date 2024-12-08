@@ -1,0 +1,84 @@
+{
+	"tags": {
+		"prefix": "tgg",
+		"description": "tags",
+		"body": "<${1}>${2}</$1>"
+	},
+	"self_close_tag": {
+		"prefix": "tg",
+		"description": "self closing tag",
+		"body": "<${1} />"
+	},
+	"view": {
+		"prefix": "view",
+		"description": "RN View component",
+		"body": "<View>${1}</View>"
+	},
+	"view_styled": {
+		"prefix": "views",
+		"description": "RN Styled View component",
+		"body": "<View style={${2}}>${1}</View>"
+	},
+	"text": {
+		"prefix": "text",
+		"description": "RN Text component",
+		"body": "<Text>${1}</Text>"
+	},
+	"text_styled": {
+		"prefix": "texts",
+		"description": "RN Styled Text component",
+		"body": "<Text style={${2}}>${1}</Text>"
+	},
+	"tw_style": {
+		"prefix": "tws",
+		"description": "TW Style",
+		"body": "style={tw`${1}`}"
+	},
+	"flat_list": {
+		"prefix": "fl",
+		"description": "RN Flatlist component",
+		"body": [
+			"<FlatList",
+			"\tdata={${1:data}}",
+			"\tkeyExtractor={(item) => ${2: item.id}}",
+			"\trenderItem={({ item }) => (${3:<View></View>})}",
+			"/>"
+		]
+	},
+	"twrnc_component": {
+		"prefix": "ctw",
+		"description": "Create RN twrnc component",
+		"body": [
+			"import React from 'react'",
+			"import tw from '@/tw'",
+			"import {Text, View} from 'react-native'",
+			"",
+			"",
+			"export default function ${1:Component}() {",
+			"",
+			"\treturn <View style={tw`${2}`}>",
+			"\t\t${3}",
+			"\t</View>",
+			"}"
+		]
+	},
+	"twrnc_component_props": {
+		"prefix": "ctwp",
+		"description": "Create RN twrnc component",
+		"body": [
+			"import React from 'react'",
+			"import tw from '@/tw'",
+			"import {Text, View} from 'react-native'",
+			"",
+			"type ${1:ComponentName} = {${2}}",
+			"",
+			"export default function $1(props: $1) {",
+			"\tconst {${3}} = props",
+			"",
+			"\treturn <View style={tw`${4}`}>",
+			"\t\t${5}",
+			"\t</View>",
+			"}"
+		]
+	}
+}

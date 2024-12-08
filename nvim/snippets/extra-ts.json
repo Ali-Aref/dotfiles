@@ -1,0 +1,28 @@
+{
+	"JSX_Comment": {
+		"prefix": "bcc",
+		"description": "jsx comment",
+		"body": "{/* ${1:comment} */}"
+	},
+	"translate": {
+		"prefix": "tti",
+		"description": "i18 translate",
+		"body": "i18.t(\"${1}\")"
+	},
+	"translate jsx": {
+		"prefix": "tt",
+		"description": "i18 translate in jsx",
+		"body": "{i18.t(\"${1}\")}"
+	},
+	"Docstring": {
+		"prefix": "docstr",
+		"description": "Docstring for classes or functions",
+		"body": [
+			"/**",
+			"* ${1:description}",
+			"* @param {${2:type}} {${3:parmName}} - ${4:description}",
+			"* @returns {${5:type}}",
+			"*/"
+		]
+	}
+}

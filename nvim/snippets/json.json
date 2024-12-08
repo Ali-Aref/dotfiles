@@ -1,0 +1,7 @@
+{
+	"key value pair": {
+		"prefix": "kv",
+		"description": "Key Value Pair",
+		"body": "\"${1:key}\": \"${2:value}\","
+	}
+}

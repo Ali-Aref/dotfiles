@@ -1,0 +1,15 @@
+[user]
+	email = aliaref.js@gmail.com
+	name = Ali Aref
+	signingkey = /home/ali/.ssh/github.pub
+[core]
+	editor = nvim
+	compression = 0
+[http]
+	postBuffer = 524288000
+[gpg]
+	format = ssh
+[merge]
+	tool = vimdiff
+[pull]
+	rebase = true

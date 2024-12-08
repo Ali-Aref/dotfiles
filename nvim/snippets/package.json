@@ -1,0 +1,62 @@
+{
+	"name": "neo-snippets",
+	"engines": {
+		"vscode": "^1.11.0"
+	},
+	"contributes": {
+		"snippets": [
+      {
+        "language": "django",
+        "path": "./django/admin.json"
+      },
+      {
+        "language": "django",
+        "path": "./django/forms.json"
+      },
+      {
+        "language": "django",
+        "path": "./django/models.json"
+      },
+      {
+        "language": "django",
+        "path": "./django/tags.json"
+      },
+      {
+        "language": "django",
+        "path": "./django/urls.json"
+      },
+      {
+        "language": "django",
+        "path": "./django/views.json"
+      },
+      {
+        "language": "djangohtml",
+        "path": "./djangohtml.json"
+      },
+      {
+        "language": "django-rest",
+        "path": "./django/django_rest/serializers.json"
+      },
+      {
+        "language": "django-rest",
+        "path": "./django/django_rest/views.json"
+      },
+			{
+				"language": "typescriptreact",
+				"path": "./react-native.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./extra-ts.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./extra-ts.json"
+			},
+			{
+				"language": "json",
+				"path": "./json.json"
+			}
+		]
+	}
+}
