@@ -135,6 +135,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin
 # xampp bine
 export PATH=$PATH:/opt/lampp/bin
 
+export EDITOR=nvim
+
 # info
 alias batinfo="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias tm="tmux"
