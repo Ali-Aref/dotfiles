@@ -38,7 +38,14 @@ return {
 							width = 0.8,
 						},
 					},
-					lsp_document_symbols = { theme = "cursor" },
+					lsp_document_symbols = {
+						theme = "cursor",
+						previewer = true,
+						layout_config = {
+							width = 0.5,
+							preview_width = 0.6,
+						},
+					},
 					lsp_workspace_symbols = { theme = "ivy" },
 					diagnostics = { theme = "ivy" },
 					colorscheme = { enable_preview = true },
