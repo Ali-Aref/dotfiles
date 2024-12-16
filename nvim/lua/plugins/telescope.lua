@@ -22,6 +22,14 @@ return {
 					},
 				},
 				pickers = {
+					find_files = {
+						previewer = true,
+						layout_strategy = "horizontal", -- horizontal, vertical, center
+						layout_config = {
+							width = 0.9,
+							preview_width = 0.5
+						},
+					},
 					buffers = {
 						theme = "cursor",
 						previewer = false,
@@ -33,10 +41,7 @@ return {
 					live_grep = { theme = "ivy" },
 					grep_string = { theme = "ivy" },
 					lsp_references = {
-						theme = "dropdown",
-						layout_config = {
-							width = 0.8,
-						},
+						layout_strategy = "vertical",
 					},
 					lsp_document_symbols = {
 						theme = "cursor",
