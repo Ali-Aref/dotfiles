@@ -1,6 +1,6 @@
 [user]
-	email = aliaref.js@gmail.com
 	name = Ali Aref
+	email = aliaref.dev@gmail.com
 	signingkey = 3C376D3B4B2DE304
 [core]
 	editor = nvim
