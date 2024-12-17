@@ -1,6 +1,7 @@
 [user]
 	email = aliaref.js@gmail.com
 	name = Ali Aref
+	signingkey = 3C376D3B4B2DE304
 [core]
 	editor = nvim
 	compression = 0
@@ -9,3 +10,7 @@
 [http]
 	postBuffer = 524288000
 
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
