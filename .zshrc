@@ -127,13 +127,15 @@ source $ZSH/oh-my-zsh.sh
 
 # android (React Native)
 # export ANDROID_HOME=/opt/android
-# export PATH="${ANDROID_HOME}/platform-tools:${PATH}"
+# export PATH="${ANDROID_HOME}/platform-tools:${TH}"
 export ANDROID_HOME="/home/ali/Android"
 export ANDROID_SDK_ROOT="/home/ali/Android"
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin
 
 # xampp bine
 export PATH=$PATH:/opt/lampp/bin
+# pipx apps path
+export PATH=$PATH:/home/ali/.local/bin
 
 export EDITOR=nvim
 
