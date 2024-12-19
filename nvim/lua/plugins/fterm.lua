@@ -18,6 +18,10 @@ return {
 			cmd = "lazygit",
 			dimensions = { height = 0.9, width = 0.9 },
 		})
+		local posting = fterm:new({
+			cmd = "posting --collection rest",
+			dimensions = { height = 0.9, width = 0.9 },
+		})
 		local bottomTerm = fterm:new({
 			dimensions = { height = 0.4, width = 1, x = 0, y = 1 },
 		})
@@ -35,6 +39,9 @@ return {
 		-- lazygit
 		vim.keymap.set("n", "<A-g>", function() lazygit:toggle() end, { desc = "lazygit" })
 		vim.keymap.set("t", "<A-g>", function() lazygit:toggle() end, { desc = "Toggle lazygit" })
+		-- posting
+		vim.keymap.set("n", "<A-p>", function() posting:toggle() end, { desc = "posting" })
+		vim.keymap.set("t", "<A-p>", function() posting:toggle() end, { desc = "Toggle Posting" })
 		-- bottom terminal
 		vim.keymap.set("n", "<A-\\>", function() bottomTerm:toggle() end, { desc = "Toggle bottom terminal" })
 		vim.keymap.set("t", "<A-\\>", function() bottomTerm:toggle() end, { desc = "Toggle bottom terminal" })
