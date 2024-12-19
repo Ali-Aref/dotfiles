@@ -6,13 +6,13 @@
 	},
 	"translate": {
 		"prefix": "tti",
-		"description": "i18 translate",
-		"body": "i18.t(\"${1}\")"
+		"description": "i18n translate",
+		"body": "i18n.t(\"${1}\")"
 	},
 	"translate jsx": {
 		"prefix": "tt",
-		"description": "i18 translate in jsx",
-		"body": "{i18.t(\"${1}\")}"
+		"description": "i18n translate in jsx",
+		"body": "{i18n.t(\"${1}\")}"
 	},
 	"Docstring": {
 		"prefix": "docstr",
