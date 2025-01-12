@@ -19,7 +19,7 @@ return {
 			dimensions = { height = 0.9, width = 0.9 },
 		})
 		local posting = fterm:new({
-			cmd = "posting --collection rest",
+			cmd = "posting --collection collection --env .env",
 			dimensions = { height = 0.9, width = 0.9 },
 		})
 		local bottomTerm = fterm:new({

@@ -52,7 +52,7 @@ return {
 				},
 				transparent_background = false, -- disables setting the background color.
 				show_end_of_buffer = true, -- shows the '~' characters after the end of buffers
-				term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+				term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
 				dim_inactive = {
 					enabled = false, -- dims the background color of inactive window
 					shade = "dark",
@@ -100,7 +100,7 @@ return {
 				},
 			})
 			-- setup must be called before loading
-			vim.cmd.colorscheme("catppuccin")
+			-- vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 	{
@@ -152,6 +152,26 @@ return {
 				},
 			})
 			onedark.load()
+		end,
+	},
+	-- bioandres
+	{
+		"olivercederborg/poimandres.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("poimandres").setup({
+				bold_vert_split = false, -- use bold vertical separators
+				dim_nc_background = false, -- dim 'non-current' window backgrounds
+				disable_background = false, -- disable background
+				disable_float_background = true, -- disable background for floats
+				disable_italics = false, -- disable italics
+			})
+		end,
+
+		-- optionally set the colorscheme within lazy config
+		init = function()
+			vim.cmd("colorscheme poimandres")
 		end,
 	},
 }

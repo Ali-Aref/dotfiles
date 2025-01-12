@@ -9,6 +9,7 @@ vim.opt.termguicolors = true
 vim.o.tabstop = 2 -- Set tab spacing to 2 spaces
 vim.o.shiftwidth = 2 -- Set the number of spaces used for each level of indentation
 vim.o.softtabstop = 2 -- Set the number of spaces to insert when the Tab key is pressed
+vim.o.expandtab = false -- Use spaces instead of tabs
 
 -- linenumber
 vim.opt.number = true

@@ -42,6 +42,7 @@ return {
 					grep_string = { theme = "ivy" },
 					lsp_references = {
 						layout_strategy = "vertical",
+						show_line = false,
 					},
 					lsp_document_symbols = {
 						theme = "cursor",
