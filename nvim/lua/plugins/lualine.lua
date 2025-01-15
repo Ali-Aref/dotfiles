@@ -4,7 +4,8 @@ return {
 	config = function()
 		local excluded_filetypes = {}
 		-- local excluded_filetypes = { "NvimTree", "TelescopePrompt", "spectre_panel", "FTerm" }
-		local custom_theme = require("lualine.themes.catppuccin")
+		-- local custom_theme = require("lualine.themes.catppuccin")
+		local custom_theme = require("lualine.themes.onedark")
 		custom_theme.normal.c.bg = nil
 		-- custom_theme.insert.c.bg = nil
 		-- custom_theme.visual.c.bg = nil
@@ -37,8 +38,8 @@ return {
 
 		require("lualine").setup({
 			options = {
-				-- theme = custom_theme,
-				theme = "catppuccin",
+				theme = custom_theme,
+				-- theme = "catppuccin",
 				--        
 				section_separators = { left = "", right = "" },
 				-- │ ┊      

@@ -45,12 +45,12 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
-				flavour = "macchiato", -- auto, latte, frappe, macchiato, mocha
+				flavour = "mocha", -- auto, latte, frappe, macchiato, mocha
 				background = { -- :h background
-					light = "latte",
-					dark = "mocha",
+					-- light = "latte",
+					-- dark = "mocha",
 				},
-				transparent_background = false, -- disables setting the background color.
+				transparent_background = true, -- disables setting the background color.
 				show_end_of_buffer = true, -- shows the '~' characters after the end of buffers
 				term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
 				dim_inactive = {

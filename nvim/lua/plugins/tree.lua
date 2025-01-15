@@ -7,15 +7,18 @@ return {
 	},
 	config = function()
 		local floating_window_width = 100
-		local floating_window_height = 30
+		local floating_window_height = 40
 
 		require("nvim-tree").setup({
 			update_focused_file = { enable = true },
+			filters = {
+				dotfiles = true,
+			},
 			view = {
 				width = 30,
 				side = "left", -- left, right
 				float = {
-					enable = false, -- floating
+					enable = true, -- floating
 					open_win_config = {
 						relative = "editor",
 						border = "rounded",
