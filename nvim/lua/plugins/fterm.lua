@@ -22,6 +22,10 @@ return {
 			cmd = "posting --collection collection --env .env",
 			dimensions = { height = 0.9, width = 0.9 },
 		})
+		local taskell = fterm:new({
+			cmd = "taskell todo.md",
+			dimensions = { height = 0.5, width = 1, x = 0, y = 1 },
+		})
 		local bottomTerm = fterm:new({
 			dimensions = { height = 0.4, width = 1, x = 0, y = 1 },
 		})
@@ -39,6 +43,9 @@ return {
 		-- lazygit
 		vim.keymap.set("n", "<A-g>", function() lazygit:toggle() end, { desc = "lazygit" })
 		vim.keymap.set("t", "<A-g>", function() lazygit:toggle() end, { desc = "Toggle lazygit" })
+		-- taskell
+		vim.keymap.set("n", "<leader>t", function() taskell:toggle() end, { desc = "Taskell" })
+		vim.keymap.set("t", "<leader>t", function() taskell:toggle() end, { desc = "Toggle Taskell" })
 		-- posting
 		vim.keymap.set("n", "<A-p>", function() posting:toggle() end, { desc = "posting" })
 		vim.keymap.set("t", "<A-p>", function() posting:toggle() end, { desc = "Toggle Posting" })
