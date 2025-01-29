@@ -17,7 +17,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # jonathan
 # nicoulaj
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="fwalch"
+# ZSH_THEME="fwalch"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -167,11 +168,6 @@ alias em="~/Android/emulator/emulator"
 
 # fun
 alias starwarstory="telnet towel.blinkenlights.nl"
-
-# nvm -- delete it 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"

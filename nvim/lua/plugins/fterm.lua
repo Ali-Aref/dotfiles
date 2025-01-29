@@ -44,8 +44,8 @@ return {
 		vim.keymap.set("n", "<A-g>", function() lazygit:toggle() end, { desc = "lazygit" })
 		vim.keymap.set("t", "<A-g>", function() lazygit:toggle() end, { desc = "Toggle lazygit" })
 		-- taskell
-		vim.keymap.set("n", "<leader>t", function() taskell:toggle() end, { desc = "Taskell" })
-		vim.keymap.set("t", "<leader>t", function() taskell:toggle() end, { desc = "Toggle Taskell" })
+		vim.keymap.set("n", "<A-t>", function() taskell:toggle() end, { desc = "Taskell" })
+		vim.keymap.set("t", "<A-t>", function() taskell:toggle() end, { desc = "Toggle Taskell" })
 		-- posting
 		vim.keymap.set("n", "<A-p>", function() posting:toggle() end, { desc = "posting" })
 		vim.keymap.set("t", "<A-p>", function() posting:toggle() end, { desc = "Toggle Posting" })
