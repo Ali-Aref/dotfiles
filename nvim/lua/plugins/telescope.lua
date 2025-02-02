@@ -69,19 +69,19 @@ return {
 	--
 	-- 		vim.keymap.set("n", "<leader>fa", builtin.git_files, { desc = "Find all files" })
 	--x 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
-	-- 		vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Live grep " })
-	-- 		vim.keymap.set("n", "<leader>fW", builtin.grep_string, { desc = "Grep string under cursor" })
+	--x 		vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Live grep " })
+	--x 		vim.keymap.set("n", "<leader>fW", builtin.grep_string, { desc = "Grep string under cursor" })
 	--x 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find buffer" })
 	-- 		vim.keymap.set("n", "<leader>fc", builtin.colorscheme, { desc = "Choose color scheme" })
 	-- 		-- lsp features
-	-- 		vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "Find LSP reference from under cursor" })
-	-- 		vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find LSP document symbols" })
-	-- 		vim.keymap.set("n", "<leader>fS", builtin.lsp_workspace_symbols, { desc = "Find LSP workspace symbols" })
-	-- 		vim.keymap.set("n", "<leader>fd", function()
-	-- 			builtin.diagnostics({ bufnr = 0 })
-	-- 		end, { desc = "Find diagnostics for current buffer" })
-	-- 		vim.keymap.set("n", "<leader>fD", builtin.diagnostics, { desc = "Find diagnostics for all buffers" })
-	-- 	end,
+	--x 		vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "Find LSP reference from under cursor" })
+	--x 		vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Find LSP document symbols" })
+	--x 		vim.keymap.set("n", "<leader>fS", builtin.lsp_workspace_symbols, { desc = "Find LSP workspace symbols" })
+	--x 		vim.keymap.set("n", "<leader>fd", function()
+	--x 			builtin.diagnostics({ bufnr = 0 })
+	--x 		end, { desc = "Find diagnostics for current buffer" })
+	--x 		vim.keymap.set("n", "<leader>fD", builtin.diagnostics, { desc = "Find diagnostics for all buffers" })
+	--x 	end,
 	-- },
 	-- -- telescope ui for quick actions
 	-- {

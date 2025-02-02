@@ -32,7 +32,7 @@ return {
 			},
 		})
 		-- mapping
-		vim.keymap.set({ "n", "v" }, "<leader>fm", function()
+		vim.keymap.set({ "n", "v" }, "<leader>bf", function()
 			require("conform").format({
 				lsp_fallback = false,
 				timeout_ms = 5000, -- 3 seconds
