@@ -8,9 +8,10 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, desc = "Mov
 
 -- map noh to esc
 vim.keymap.set("n", "<esc>", "<cmd>:noh<CR>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- kill current buffer
-vim.keymap.set("n", "<leader>x", "<cmd>bprev<CR><cmd>bd#<CR>", { desc = "Close buffer" })
+vim.keymap.set("n", "<leader>x", "<cmd>bprev<CR><cmd>bd!#<CR>", { desc = "Close buffer" })
 
 -- toggle spell checking
 vim.keymap.set("n", "gS", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell checking" })
@@ -20,10 +21,10 @@ vim.keymap.set("n", "gS", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell che
 -- vim.keymap.set("n", "<S-Tab>", "<C-w><C-W>", { desc = "Move left" })
 
 -- navigate to panes
-vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Move left" })
-vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Move right" })
-vim.keymap.set("n", "<A-k>", "<C-w>k", { desc = "Move up" })
-vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "Move down" })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move left" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move right" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move up" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move down" })
 
 -- resize panes
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -10<CR>", { desc = "Shrink pane vertically" })
