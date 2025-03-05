@@ -29,5 +29,6 @@ return {
     vim.keymap.set("n", "<leader>fv", ":FzfLua spell_suggest<CR>", { desc = "Spelling suggestions" })
     vim.keymap.set("n", "<leader>fl", ":FzfLua resume<CR>", { desc = "Last command/query" })
     vim.keymap.set("n", "<leader>fm", ":FzfLua marks<CR>", { desc = "Last command/query" })
+    vim.keymap.set("n", "<leader>fK", ":FzfLua keymaps<CR>", { desc = "Keymaps" })
   end,
 }
