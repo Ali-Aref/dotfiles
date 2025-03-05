@@ -17,8 +17,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # jonathan
 # nicoulaj
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="fwalch"
-ZSH_THEME="agnoster"
+ZSH_THEME="fwalch"
+# ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
