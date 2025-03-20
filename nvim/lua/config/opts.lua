@@ -21,6 +21,10 @@ vim.opt.splitright = true
 -- vim.opt.guicursor = "" -- normal mode cursor
 vim.opt.cursorline = false -- highlight the current line
 
+-- searching
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- sepll check
 vim.opt.spell = false
 vim.opt.spelllang = "en_us"
