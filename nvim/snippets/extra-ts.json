@@ -1,4 +1,9 @@
 {
+  "console.log": {
+    "prefix": "cl",
+    "description": "",
+    "body": "console.log(${1});"
+  },
 	"JSX_Comment": {
 		"prefix": "bcc",
 		"description": "jsx comment",
