@@ -7,8 +7,8 @@ args = ["--login"]
 
 
 [window]
-opacity = 1
-blur = false  # macos or kde wyland
+opacity = 0.75
+blur = true  # macos or kde wyland
 
 [scrolling]
 history = 1000
