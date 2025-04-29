@@ -1,12 +1,12 @@
 [user]
 	name = Ali Aref
 	email = aliaref.dev@gmail.com
-	signingkey = 6A426091EF4C50B2
+	signingkey = 009F4A9A94ED6746
 [core]
 	editor = nvim
 	compression = 0
 [pull]
-	rebase = true
+	rebase = false
 [http]
 	postBuffer = 524288000
 
