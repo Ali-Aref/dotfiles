@@ -45,9 +45,9 @@ return {
 				-- theme = custom_theme,
 				theme = "onedark",
 				--        
-				section_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				-- │ ┊      
-				component_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
 				globalstatus = true,
 				disabled_filetypes = { statusline = { "dashboard", "alpha", "starter", "snacks_dashboard" } },
 				refresh = { statusline = 300 },
