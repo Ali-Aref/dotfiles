@@ -1,5 +1,7 @@
 [general]
-import = [ "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml" ]
+# import = [ "~/.config/alacritty/themes/themes/base16_default_dark.toml" ]
+# import = [ "~/.config/alacritty/themes/themes/carbonfox.toml" ]
+import = [ "~/.config/alacritty/themes/themes/citylights.toml" ]
 
 [terminal.shell]
 program = "/bin/zsh"
@@ -7,53 +9,58 @@ args = ["--login"]
 
 
 [window]
-opacity = 0.75
-blur = true  # macos or kde wyland
+opacity = 1
+blur = false  # macos or kde wyland
 
 [scrolling]
 history = 1000
 
 [font]
-# size = 11
+size = 12.5
+offset = { x = 0, y = -1 }
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+
+# size = 13.5
+# offset = { x = 0, y = -1 }
+# normal = { family = "Iosevka Nerd Font", style = "Regular" }
+# bold = { family = "Iosevka Nerd Font", style = "Bold" }
+# italic = { family = "Iosevka Nerd Font", style = "Italic" }
+# bold_italic = { family = "Iosevka Nerd Font", style = "Bold Italic" }
+
+# size = 12
+# offset = { x = 0, y = -1 }
+# normal = { family = "Berkeley Mono Variable", style = "Regular" }
+# bold = { family = "Berkeley Mono Variable", style = "Bold" }
+# italic = { family = "Berkeley Mono Variable", style = "Italic" }
+# bold_italic = { family = "Berkeley Mono Variable", style = "Bold Italic" }
+
+# size = 13
 # offset = { x = 0, y = 0 }
-# normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-# bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
-# italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
-# bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
-
-size = 13
-offset = { x = 0, y = 0 }
-normal = { family = "Iosevka Nerd Font", style = "Regular" }
-bold = { family = "Iosevka Nerd Font", style = "Bold" }
-italic = { family = "Iosevka Nerd Font", style = "Italic" }
-bold_italic = { family = "Iosevka Nerd Font", style = "Bold Italic" }
-
-# size = 7
-# offset = { x = 0, y = -2 }
 # normal = { family = "VictorMono Nerd Font", style = "Medium" }
 # bold = { family = "VictorMono Nerd Font", style = "Bold" }
 # italic = { family = "VictorMono Nerd Font", style = "Italic" }
 # bold_italic = { family = "VictorMono Nerd Font", style = "Bold Italic" }
 
 # size = 13
+# offset = { x = 0, y = -1 }
+# normal = { family = "ZedMono Nerd Font", style = "Regular" }
+# bold = { family = "ZedMono Nerd Font", style = "Bold" }
+# italic = { family = "ZedMono Nerd Font", style = "Italic" }
+# bold_italic = { family = "ZedMono Nerd Font", style = "Bold Italic" }
+
+# size = 14
 # offset = { x = 0, y = 0 }
 # normal = { family = "ComicMono Nerd Font", style = "Medium" }
 # bold = { family = "ComicMono Nerd Font", style = "Bold" }
 # italic = { family = "ComicMono Nerd Font", style = "Italic" }
 # bold_italic = { family = "ComicMono Nerd Font", style = "Bold Italic" }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# size = 12.5
+# offset = { x = 0, y = 0 }
+# normal = { family = "Hack", style = "Medium" }
+# bold = { family = "Hack", style = "Bold" }
+# italic = { family = "Hack", style = "Italic" }
+# bold_italic = { family = "Hack", style = "Bold Italic" }

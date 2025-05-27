@@ -43,6 +43,7 @@ return {
 		require("lualine").setup({
 			options = {
 				-- theme = custom_theme,
+				-- theme = "auto",
 				theme = "onedark",
 				--        
 				section_separators = { left = "", right = "" },

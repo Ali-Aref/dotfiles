@@ -6,12 +6,13 @@ return {
     local fzf = require("fzf-lua")
     local config = fzf.config
     local actions = config.actions
+
     fzf.setup({})
 
     local inline_opts = {
       winopts = {
-        height = 20, -- value of 0 - 1 will be treated as percentage
-        width = 60, -- value of 0 - 1 will be treated as percentage
+        height = 20,
+        width = 60,
         relative = "cursor",
       }
     }

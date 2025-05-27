@@ -14,6 +14,16 @@ return {
 			filters = {
 				dotfiles = true,
 			},
+      renderer = {
+        icons = {
+          show = {
+            file = true,
+            folder = true,
+            folder_arrow = true,
+            git = true,
+          },
+        },
+      },
 			view = {
 				width = 30,
 				side = "left", -- left, right
