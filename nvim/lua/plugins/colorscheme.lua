@@ -68,7 +68,7 @@ return {
 		priority = 1000,
 		config = function()
 			-- Set up configuration options
-			vim.g.gruvbox_material_background = "medium" -- soft, medium, hard
+			vim.g.gruvbox_material_background = "soft" -- soft, medium, hard
 			vim.g.gruvbox_material_foreground = "material" -- material, mix, original
 			vim.g.gruvbox_material_better_performance = 1
 			vim.g.gruvbox_material_enable_italic = 1
