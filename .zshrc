@@ -126,13 +126,6 @@ source $ZSH/oh-my-zsh.sh
 # github
 # export GIT_SSH_COMMAND='ssh -i ~/.ssh/github -o IdentitiesOnly=yes'
 
-# android (React Native)
-# export ANDROID_HOME=/opt/android
-# export PATH="${ANDROID_HOME}/platform-tools:${TH}"
-export ANDROID_HOME="/home/ali/Android"
-export ANDROID_SDK_ROOT="/home/ali/Android"
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin
-
 # xampp bine
 export PATH=$PATH:/opt/lampp/bin
 # pipx apps path
@@ -164,7 +157,7 @@ alias sua="source env/bin/activate"
 alias dua="deactivate"
 alias pmr="python manage.py runserver"
 alias pmm="python manage.py makemigrations && python manage.py migrate"
-alias em="~/Android/emulator/emulator"
+# alias em="~/Android/emulator/emulator"
 
 # fun
 alias starwarstory="telnet towel.blinkenlights.nl"
@@ -173,3 +166,10 @@ alias starwarstory="telnet towel.blinkenlights.nl"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+
+# React Native
+export ANDROID_HOME="$HOME/Android"
+export ANDROID_SDK_ROOT="$HOME/Android"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/emulator"
