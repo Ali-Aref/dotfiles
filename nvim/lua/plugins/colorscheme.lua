@@ -60,8 +60,49 @@ return {
 					-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 				},
 			})
-			-- setup must be called before loading
-			-- vim.cmd.colorscheme("catppuccin")
+		end,
+	},
+	{
+		-- gruvbox-material
+		"sainnhe/gruvbox-material",
+		priority = 1000,
+		config = function()
+			-- Set up configuration options
+			vim.g.gruvbox_material_background = "medium" -- soft, medium, hard
+			vim.g.gruvbox_material_foreground = "material" -- material, mix, original
+			vim.g.gruvbox_material_better_performance = 1
+			vim.g.gruvbox_material_enable_italic = 1
+			vim.g.gruvbox_material_enable_bold = 1
+			vim.g.gruvbox_material_transparent_background = 2 -- 2 for full transparency
+			vim.g.gruvbox_material_sign_column_background = "none"
+			vim.g.gruvbox_material_diagnostic_text_highlight = 1
+			vim.g.gruvbox_material_diagnostic_line_highlight = 1
+			vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
+			-- vim.g.gruvbox_material_cursor = "orange" -- `'auto'`, `'red'`, `'orange'`, `'yellow'`, `'green', 'aqua'`, `'blue'`, `'purple'`
+
+			-- Remove window split borders
+			vim.g.gruvbox_material_ui_contrast = "high"
+			vim.g.gruvbox_material_float_style = "dim"
+
+			-- Custom highlights to remove borders
+			vim.api.nvim_create_autocmd("ColorScheme", {
+				pattern = "gruvbox-material",
+				callback = function()
+					-- Remove split borders
+					vim.cmd([[highlight WinSeparator guifg=none guibg=none]])
+					-- Remove completion menu borders
+					vim.cmd([[highlight Pmenu guibg=none]])
+					vim.cmd([[highlight PmenuSel guibg=#504945]])
+					vim.cmd([[highlight PmenuSbar guibg=none]])
+					vim.cmd([[highlight PmenuThumb guibg=#504945]])
+					-- Remove floating window borders
+					vim.cmd([[highlight NormalFloat guibg=none]])
+					vim.cmd([[highlight FloatBorder guifg=none guibg=none]])
+					-- Remove terminal borders
+					vim.cmd([[highlight TerminalBorder guifg=none guibg=none]])
+				end,
+			})
 		end,
 	},
 }
+

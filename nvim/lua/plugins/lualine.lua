@@ -4,7 +4,14 @@ return {
 	config = function()
 		local excluded_filetypes = {}
 		-- local excluded_filetypes = { "NvimTree", "TelescopePrompt", "spectre_panel", "FTerm" }
-
+		-- local custom_theme = require("lualine.themes.catppuccin")
+		-- local custom_theme = require("lualine.themes.tokyonight")
+		-- custom_theme.normal.c.bg = nil
+		-- custom_theme.insert.c.bg = nil
+		-- custom_theme.visual.c.bg = nil
+		-- custom_theme.replace.c.bg = nil
+		-- custom_theme.command.c.bg = nil
+		-- custom_theme.inactive.c.bg = nil
 		-- inactive = {
 		--   a = { fg = colors.base1, bg = colors.base02, gui = 'bold' },
 		--   b = { fg = colors.base023, bg = colors.base01 },
@@ -36,8 +43,8 @@ return {
 
 		require("lualine").setup({
 			options = {
-				-- theme = custom_theme,
 				theme = "auto",
+				-- theme = "auto",
 				--        
 				section_separators = { left = "", right = "" },
 				-- │ ┊      
