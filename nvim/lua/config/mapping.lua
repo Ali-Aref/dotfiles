@@ -21,10 +21,10 @@ vim.keymap.set("n", "gS", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell che
 -- vim.keymap.set("n", "<S-Tab>", "<C-w><C-W>", { desc = "Move left" })
 
 -- navigate to panes
-vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Move left" })
-vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Move right" })
-vim.keymap.set("n", "<A-k>", "<C-w>k", { desc = "Move up" })
-vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "Move down" })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move left" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move right" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move up" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move down" })
 
 -- resize panes
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -10<CR>", { desc = "Shrink pane vertically" })
