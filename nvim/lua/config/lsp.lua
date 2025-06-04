@@ -80,13 +80,29 @@ lspconfig.tailwindcss.setup({
 -- pylsp
 lspconfig.pylsp.setup({
 	capabilities = capabilities,
+	settings = {
+		pylsp = {
+			plugins = {
+				-- pyflakes = { enabled = true },
+				-- pycodestyle = { enabled = true },
+				-- mccabe = { enabled = true },
+				pylint = { enabled = true }, -- optional
+				-- flake8 = { enabled = false }, -- optional
+				-- yapf = { enabled = false }, -- formatter, disable if using black
+				-- autopep8 = { enabled = false },
+				-- pylsp_mypy = { enabled = false }, -- can be enabled for type-checking
+				-- jedi_completion = { enabled = true },
+				-- jedi_hover = { enabled = true },
+				-- jedi_references = { enabled = true },
+			},
+		},
+	},
 })
 
 -- clang
 lspconfig.clangd.setup({
 	capabilities = capabilities,
 })
-
 
 lspconfig.emmet_language_server.setup({
 	capabilities = capabilities,
