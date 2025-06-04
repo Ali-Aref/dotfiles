@@ -1,6 +1,5 @@
 -- jj to esc
 vim.keymap.set("i", "jj", "<esc>")
--- vim.keymap.set("t", 'jj', [[<C-\><C-n>]], { noremap = true, silent = true })
 
 -- navigation when in normal mode with wrap lines
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, desc = "Move down" })
@@ -8,7 +7,10 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, desc = "Mov
 
 -- map noh to esc
 vim.keymap.set("n", "<esc>", "<cmd>:noh<CR>")
--- vim.keymap.set("t", "jj", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-n><C-n>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+-- start lazygit
+vim.keymap.set("n", "\\g", "<cmd>enew | terminal lazygit<CR>i", { noremap = true, silent = true })
 
 -- kill current buffer
 vim.keymap.set("n", "<leader>x", "<cmd>bprev<CR><cmd>bd!#<CR>", { desc = "Close buffer" })
