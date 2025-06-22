@@ -126,12 +126,11 @@ source $ZSH/oh-my-zsh.sh
 # github
 # export GIT_SSH_COMMAND='ssh -i ~/.ssh/github -o IdentitiesOnly=yes'
 
-# xampp bine
+# xampp bin
 export PATH=$PATH:/opt/lampp/bin
-# pipx apps path
-export PATH=$PATH:/home/ali/.local/bin
 
 export EDITOR=nvim
+export PATH=$HOME/.local/share/nvim/mason/bin:$PATH
 
 # info
 alias batinfo="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
