@@ -1,7 +1,6 @@
 [general]
-# import = [ "~/.config/alacritty/themes/themes/base16_default_dark.toml" ]
-# import = [ "~/.config/alacritty/themes/themes/carbonfox.toml" ]
-import = [ "~/.config/alacritty/themes/themes/citylights.toml" ]
+# import = [ "~/.config/alacritty/themes/themes/citylights.toml" ]
+import = [ "~/.config/alacritty/themes/themes/gruvbox_dark.toml" ]
 
 [terminal.shell]
 program = "/bin/zsh"
@@ -9,7 +8,7 @@ args = ["--login"]
 
 
 [window]
-opacity = 1
+opacity = 0.90
 blur = false  # macos or kde wyland
 
 [scrolling]
@@ -45,7 +44,7 @@ bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 # bold_italic = { family = "VictorMono Nerd Font", style = "Bold Italic" }
 
 # size = 13
-# offset = { x = 0, y = -1 }
+# offset = { x = 0, y = 0 }
 # normal = { family = "ZedMono Nerd Font", style = "Regular" }
 # bold = { family = "ZedMono Nerd Font", style = "Bold" }
 # italic = { family = "ZedMono Nerd Font", style = "Italic" }
@@ -58,9 +57,18 @@ bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 # italic = { family = "ComicMono Nerd Font", style = "Italic" }
 # bold_italic = { family = "ComicMono Nerd Font", style = "Bold Italic" }
 
-# size = 12.5
-# offset = { x = 0, y = 0 }
-# normal = { family = "Hack", style = "Medium" }
-# bold = { family = "Hack", style = "Bold" }
-# italic = { family = "Hack", style = "Italic" }
-# bold_italic = { family = "Hack", style = "Bold Italic" }
+# group 3
+# size = 12
+# offset = { x = -1, y = -2 }
+# normal = { family = "Hurmit Nerd Font", style = "Medium" }
+# bold = { family = "Hurmit Nerd Font", style = "Bold" }
+# italic = { family = "Hurmit Nerd Font", style = "Italic" }
+# bold_italic = { family = "Hurmit Nerd Font", style = "Bold Italic" }
+
+
+# size = 13
+# offset = { x = 0, y = -1 }
+# normal = { family = "EnvyCodeR Nerd Font", style = "Medium" }
+# bold = { family = "EnvyCodeR Nerd Font", style = "Bold" }
+# italic = { family = "EnvyCodeR Nerd Font", style = "Italic" }
+# bold_italic = { family = "EnvyCodeR Nerd Font", style = "Bold Italic" }
