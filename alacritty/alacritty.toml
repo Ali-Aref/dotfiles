@@ -1,6 +1,7 @@
 [general]
 # import = [ "~/.config/alacritty/themes/themes/citylights.toml" ]
-import = [ "~/.config/alacritty/themes/themes/gruvbox_dark.toml" ]
+# import = [ "~/.config/alacritty/themes/themes/gruvbox_dark.toml" ]
+import = [ "~/.config/alacritty/themes/themes/nordic.toml" ]
 
 [terminal.shell]
 program = "/bin/zsh"
