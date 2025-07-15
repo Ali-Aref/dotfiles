@@ -68,7 +68,7 @@ return {
 		priority = 1000,
 		config = function()
 			-- Set up configuration options
-			vim.g.gruvbox_material_background = "soft" -- soft, medium, hard
+			vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
 			vim.g.gruvbox_material_foreground = "material" -- material, mix, original
 			vim.g.gruvbox_material_better_performance = 1
 			vim.g.gruvbox_material_enable_italic = 1
@@ -79,6 +79,7 @@ return {
 			vim.g.gruvbox_material_diagnostic_line_highlight = 1
 			vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
 			-- vim.g.gruvbox_material_cursor = "orange" -- `'auto'`, `'red'`, `'orange'`, `'yellow'`, `'green', 'aqua'`, `'blue'`, `'purple'`
+      vim.g.gruvbox_material_show_eob = 1 -- 1 for show end of buffer
 
 			-- Remove window split borders
 			vim.g.gruvbox_material_ui_contrast = "high"

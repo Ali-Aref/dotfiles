@@ -37,7 +37,8 @@ if  [[ $1 = "--default" ]]; then
 	SE="#4DD0E1"
 	change_color
 elif  [[ $1 = "--nord" ]]; then
-	BG="#3B4252"
+	# BG="#3B4252"
+	BG="#242933"
 	FG="#E5E9F0"
 	BGA="#454C5C"
 	SEP="#5B6579"

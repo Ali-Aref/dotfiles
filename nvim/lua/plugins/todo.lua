@@ -1,7 +1,7 @@
 return {
 	"folke/todo-comments.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
-	cmd = { "TodoQuickFix", "TodoLocList", "TodoTrouble", "TodoTelescope" },
+	cmd = { "TodoQuickFix", "TodoLocList" },
 	opts = {
 		keywords = {
 			FIX = { icon = " ", color = "error", alt = { "FIXME", "BUG", "FIXIT", "ISSUE" } },
@@ -12,7 +12,7 @@ return {
 			TODO = { icon = "", color = "info" },
 			NOTE = { icon = "", color = "hint", alt = { "INFO", "START" } },
 			CLEAN = { icon = "󰆳", color = "clean", alt = { "CLEANUP", "REMOVE" } },
-			API = { icon = " ", color = "test", alt = { "BACKEND", "SERVER" } },
+			SERVER = { icon = " ", color = "api", alt = { "BACKEND", "API" } },
 		},
 		colors = {
 			info = { "#25afff" },
@@ -22,16 +22,15 @@ return {
 			ref = { "#7084c6" },
 			hint = { "#10B981" },
 			clean = { "#6b7280" },
+      api = { "#C792EA" },
 		},
 	},
-	config = function()
-		-- todo quick fix
-		require("todo-comments").setup()
-		vim.keymap.set("n", "<leader>qf", "<cmd>TodoQuickFix<CR>", { desc = "Toggle todo quick fix" })
-		vim.keymap.set(
-			"n",
-			"<leader>ft", "<cmd>TodoTelescope theme=ivy initial_mode=insert previewer=true layout_config={bottom_pane={height=12}}<CR>",
-			{ desc = "Find Todos" }
-		)
-	end,
+  keys = {
+    { "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
+    { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
+    { "<leader>ta", "<cmd>TodoQuickFix<cr>" , desc = "Todo Notes" },
+    { "<leader>tn", "<cmd>TodoQuickFix keywords=NOTE,HACK,PREF<cr>" , desc = "Todo Notes/Hack/Pref" },
+    { "<leader>ts", "<cmd>TodoQuickFix keywords=SERVER,BACKEND,API<cr>" , desc = "Todo API/Server/Backend" },
+    { "<leader>tf", "<cmd>TodoQuickFix keywords=FIX,FIXME,BUG,FIXIT,ISSUE<cr>" , desc = "Todo Fix/Bug/Issue" },
+  }
 }

@@ -1,3 +1,4 @@
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 local lspconfig = require("lspconfig")
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -141,3 +142,23 @@ lspconfig.emmet_language_server.setup({
 		variables = {},
 	},
 })
+
+-- kotlin lsp
+require("lspconfig").kotlin_language_server.setup({
+  cmd = { "kotlin-language-server" },
+  init_options = {
+    storagePath = "/home/ali/.cache/kotlin-language-server"
+  },
+  filetypes = { "kotlin" },
+  capabilities = capabilities,
+  root_dir = lspconfig.util.root_pattern(
+    ".git",
+    "pom.xml",
+    "build.xml",
+    "build.gradle",
+    "settings.gradle",
+    "build.gradle.kts",
+    "settings.gradle.kts"
+  ),
+})
+
