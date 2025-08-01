@@ -18,26 +18,27 @@ return {
     }
 
     -- mapping
-    vim.keymap.set("n", "<leader>ff", ":FzfLua files<CR>", { desc = "Find files" })
+    vim.keymap.set("n", "<leader>fa", function() fzf.global() end, { desc = "Global search" })
+    vim.keymap.set("n", "<leader>ff", function() fzf.files() end, { desc = "Find files" })
     vim.keymap.set("n", "<leader>fb", function () fzf.buffers(inline_opts) end, { desc = "Find buffer" })
-    vim.keymap.set("n", "<leader>fw", ":FzfLua live_grep_native<CR>", { desc = "Live grep" })
-    vim.keymap.set("n", "<leader>fW", ":FzfLua grep_cWORD<CR>", { desc = "Grep word" })
+    vim.keymap.set("n", "<leader>fw", function () fzf.live_grep_native() end, { desc = "Live grep" })
+    vim.keymap.set("n", "<leader>fW", function () fzf.grep_cWORD() end, { desc = "Grep word" })
     -- lsp mappings
-    vim.keymap.set("n", "<leader>fr", ":FzfLua lsp_references<CR>", { desc = "LSP references" })
-    vim.keymap.set("n", "<leader>fa", function () fzf.lsp_code_actions(inline_opts) end, { desc = "LSP code actions" })
-    vim.keymap.set("n", "<leader>fd", ":FzfLua lsp_document_diagnostics<CR>", { desc = "Document Diagnostics" })
-    vim.keymap.set("n", "<leader>fD", ":FzfLua lsp_workspace_diagnostics<CR>", { desc = "Workspace Diagnostics" })
+    vim.keymap.set("n", "<leader>fr", function () fzf.lsp_references() end, { desc = "LSP references" })
+    vim.keymap.set("n", "<leader>fx", function () fzf.lsp_code_actions(inline_opts) end, { desc = "LSP code actions" })
+    vim.keymap.set("n", "<leader>fd", function () fzf.lsp_document_diagnostics() end, { desc = "Document Diagnostics" })
+    vim.keymap.set("n", "<leader>fD", function () fzf.lsp_workspace_diagnostics() end, { desc = "Workspace Diagnostics" })
     vim.keymap.set("n", "<leader>fs", function () fzf.lsp_document_symbols(inline_opts) end, { desc = "Document symbols" })
-    vim.keymap.set("n", "<leader>fS", ":FzfLua lsp_workspace_symbols<CR>", { desc = "Workspace symbols" })
-    vim.keymap.set("n", "<leader>fi", ":FzfLua lsp_incoming_calls<CR>", { desc = "LSP incoming calls" })
-    vim.keymap.set("n", "<leader>fo", ":FzfLua lsp_outgoing_calls<CR>", { desc = "LSP outgoing calls" })
+    vim.keymap.set("n", "<leader>fS", function () fzf.lsp_workspace_symbols(inline_opts) end, { desc = "Workspace symbols" })
+    vim.keymap.set("n", "<leader>fi", function () fzf.lsp_incoming_calls() end, { desc = "LSP incoming calls" })
+    vim.keymap.set("n", "<leader>fo", function () fzf.lsp_outgoing_calls() end, { desc = "LSP outgoing calls" })
     -- git
-    vim.keymap.set("n", "<leader>fg", ":FzfLua git_status<CR>", { desc = "LSP outgoing calls" })
+    vim.keymap.set("n", "<leader>fg", function () fzf.git_status() end, { desc = "LSP outgoing calls" })
     -- other
-    vim.keymap.set("n", "<leader>fc", ":FzfLua colorschemes<CR>", { desc = "Colorscheme" })
+    vim.keymap.set("n", "<leader>fc", function () fzf.colorschemes() end, { desc = "Colorscheme" })
     vim.keymap.set("n", "<leader>fv", function () fzf.spell_suggest(inline_opts) end, { desc = "Spelling suggestions" })
-    vim.keymap.set("n", "<leader>fl", ":FzfLua resume<CR>", { desc = "Last command/query" })
-    vim.keymap.set("n", "<leader>fm", ":FzfLua marks<CR>", { desc = "Marks" })
-    vim.keymap.set("n", "<leader>fK", ":FzfLua keymaps<CR>", { desc = "Keymaps" })
+    vim.keymap.set("n", "<leader>fl", function () fzf.resume() end, { desc = "Last command/query" })
+    vim.keymap.set("n", "<leader>fm", function () fzf.marks() end, { desc = "Marks" })
+    vim.keymap.set("n", "<leader>fK", function () fzf.keymaps() end, { desc = "Keymaps" })
   end,
 }

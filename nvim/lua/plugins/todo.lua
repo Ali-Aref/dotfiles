@@ -29,7 +29,7 @@ return {
     { "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },
     { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous Todo Comment" },
     { "<leader>ta", "<cmd>TodoQuickFix<cr>" , desc = "Todo Notes" },
-    { "<leader>tn", "<cmd>TodoQuickFix keywords=NOTE,HACK,PREF<cr>" , desc = "Todo Notes/Hack/Pref" },
+    { "<leader>tn", "<cmd>TodoQuickFix keywords=NOTE,HACK,PREF,START<cr>" , desc = "Todo Notes/Hack/Pref" },
     { "<leader>ts", "<cmd>TodoQuickFix keywords=SERVER,BACKEND,API<cr>" , desc = "Todo API/Server/Backend" },
     { "<leader>tf", "<cmd>TodoQuickFix keywords=FIX,FIXME,BUG,FIXIT,ISSUE<cr>" , desc = "Todo Fix/Bug/Issue" },
   }
