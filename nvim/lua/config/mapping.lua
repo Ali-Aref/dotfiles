@@ -9,12 +9,6 @@ vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, desc = "Mov
 vim.keymap.set("n", "<esc>", "<cmd>:noh<CR>")
 vim.keymap.set("t", "<C-n><C-n>", "<C-\\><C-n>", { noremap = true, silent = true })
 
--- terms
--- lazygit
-vim.keymap.set("n", "\\g", "<cmd>enew | terminal lazygit<CR>i", { noremap = true, silent = true })
--- bottom term
-vim.keymap.set("n", "\\t", "<cmd>new | terminal<CR>i", { noremap = true, silent = true })
-
 -- kill current buffer
 vim.keymap.set("n", "<leader>x", "<cmd>bprev<CR><cmd>bd!#<CR>", { desc = "Close buffer" })
 
