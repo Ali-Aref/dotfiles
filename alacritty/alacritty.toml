@@ -1,9 +1,9 @@
 [general]
 # import = [ "~/.config/alacritty/themes/themes/citylights.toml" ]
 # import = [ "~/.config/alacritty/themes/themes/gruvbox_dark.toml" ]
-import = [ "~/.config/alacritty/themes/themes/nordic.toml" ]
+# import = [ "~/.config/alacritty/themes/themes/nordic.toml" ]
 # import = [ "~/.config/alacritty/themes/themes/breeze.toml" ]
-# import = [ "~/.config/alacritty/themes/themes/catppuccin_mocha.toml" ]
+import = [ "~/.config/alacritty/themes/themes/catppuccin_mocha.toml" ]
 
 [terminal.shell]
 program = "/bin/zsh"
@@ -46,7 +46,7 @@ bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 # italic = { family = "VictorMono Nerd Font", style = "Italic" }
 # bold_italic = { family = "VictorMono Nerd Font", style = "Bold Italic" }
 
-# size = 14
+# size = 13
 # offset = { x = 0, y = 0 }
 # normal = { family = "ComicMono Nerd Font", style = "Medium" }
 # bold = { family = "ComicMono Nerd Font", style = "Bold" }
