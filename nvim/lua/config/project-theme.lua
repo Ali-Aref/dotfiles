@@ -2,7 +2,7 @@
 local M = {}
 
 -- Default fallback colorscheme
-M.default_colorscheme = "nordic"
+M.default_colorscheme = "catppuccin-mocha"
 
 -- Possible config file names to look for in project root
 local config_files = {
@@ -107,7 +107,7 @@ function M.create_project_config(colorscheme)
 return {
   colorscheme = "%s"
 }
-]], colorscheme or "nordic")
+]], colorscheme or "default")
   
   local file = io.open(config_path, "w")
   if file then
