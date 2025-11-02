@@ -24,6 +24,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- language servers
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+-- Enable file operations for automatic import updates when renaming files
+capabilities.workspace = capabilities.workspace or {}
+capabilities.workspace.fileOperations = {
+	didRename = true,
+	willRename = true,
+}
+
 -- lua_ls
 lspconfig.lua_ls.setup({
 	capabilities = capabilities,
