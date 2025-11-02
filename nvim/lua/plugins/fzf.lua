@@ -33,7 +33,7 @@ return {
     vim.keymap.set("n", "<leader>fi", function () fzf.lsp_incoming_calls() end, { desc = "LSP incoming calls" })
     vim.keymap.set("n", "<leader>fo", function () fzf.lsp_outgoing_calls() end, { desc = "LSP outgoing calls" })
     -- git
-    vim.keymap.set("n", "<leader>fg", function () fzf.git_status() end, { desc = "LSP outgoing calls" })
+    vim.keymap.set("n", "<leader>fg", function () fzf.git_status() end, { desc = "Git status" })
     -- other
     vim.keymap.set("n", "<leader>fc", function () fzf.colorschemes() end, { desc = "Colorscheme" })
     vim.keymap.set("n", "<leader>fv", function () fzf.spell_suggest(inline_opts) end, { desc = "Spelling suggestions" })
