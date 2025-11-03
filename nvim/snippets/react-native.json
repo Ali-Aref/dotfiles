@@ -80,5 +80,55 @@
 			"\t</View>",
 			"}"
 		]
+	},
+	"unistyle_component": {
+		"prefix": "unicom",
+		"description": "Create RN unistyles component",
+		"body": [
+			"import React from 'react';",
+			"import { View } from 'react-native'",
+			"import { StyleSheet } from 'react-native-unistyles';",
+      "import { Typography } from '@/components/ui';",
+			"",
+      "const ${1:Component}: React.FC = () => {",
+			"\treturn <View style={styles.container}>",
+			"\t\t<Typography>${2:$1}</Typography>",
+			"\t</View>",
+			"}",
+			"",
+			"export default $1",
+			"",
+			"const styles = StyleSheet.create({",
+      "\tcontainer: {",
+      "\t\t$3",
+      "\t}",
+      "});"
+		]
+	},
+	"unistyle_component_with_props": {
+		"prefix": "unicomp",
+		"description": "Create RN unistyles component with props",
+		"body": [
+			"import React from 'react';",
+			"import { View } from 'react-native'",
+			"import { StyleSheet } from 'react-native-unistyles';",
+      "import { Typography } from '@/components/ui';",
+			"",
+			"type Props = {}",
+			"",
+      "const ${1:Component}: React.FC<Props> = ({}) => {",
+			"\treturn <View style={styles.container}>",
+			"\t\t<Typography>${2:$1}</Typography>",
+			"\t</View>",
+			"}",
+			"",
+			"export default $1",
+			"",
+			"const styles = StyleSheet.create({",
+      "\tcontainer: {",
+      "\t\t$3",
+      "\t}",
+      "});"
+		]
 	}
 }
