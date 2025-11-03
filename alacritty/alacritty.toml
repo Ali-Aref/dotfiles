@@ -11,7 +11,7 @@ args = ["--login"]
 
 
 [window]
-opacity = 0.7
+opacity = 0.8
 blur = true  # macos or kde wyland
 
 [scrolling]
@@ -25,8 +25,8 @@ bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
 bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 
-# size = 12
-# offset = { x = 0, y = -1 }
+# size = 13
+# offset = { x = 0, y = 0 }
 # normal = { family = "Iosevka Nerd Font", style = "Regular" }
 # bold = { family = "Iosevka Nerd Font", style = "Bold" }
 # italic = { family = "Iosevka Nerd Font", style = "Italic" }
@@ -40,15 +40,29 @@ bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 # bold_italic = { family = "Berkeley Mono Variable", style = "Bold Italic" }
 
 # size = 12
-# offset = { x = -1, y = 0 }
-# normal = { family = "VictorMono Nerd Font", style = "Regular" }
-# bold = { family = "VictorMono Nerd Font", style = "Bold" }
-# italic = { family = "VictorMono Nerd Font", style = "Italic" }
-# bold_italic = { family = "VictorMono Nerd Font", style = "Bold Italic" }
-
-# size = 13
 # offset = { x = 0, y = 0 }
+# normal = { family = "VictorMono Nerd Font", style = "Bold" }
+# bold = { family = "VictorMono Nerd Font", style = "Extra Bold" }
+# italic = { family = "VictorMono Nerd Font", style = "Bold Italic" }
+# bold_italic = { family = "VictorMono Nerd Font", style = "Extra Bold Italic" }
+
+# size = 13.5
+# offset = { x = 0, y = -1 }
 # normal = { family = "ComicMono Nerd Font", style = "Medium" }
 # bold = { family = "ComicMono Nerd Font", style = "Bold" }
 # italic = { family = "ComicMono Nerd Font", style = "Italic" }
 # bold_italic = { family = "ComicMono Nerd Font", style = "Bold Italic" }
+
+# size = 13
+# offset = { x = 0, y = 0 }
+# normal = { family = "Hack Nerd Font", style = "Regular" }
+# bold = { family = "Hack Nerd Font", style = "Bold" }
+# italic = { family = "Hack Nerd Font", style = "Italic" }
+# bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
+
+# size = 13.5
+# offset = { x = 0, y = -1 }
+# normal = { family = "ComicShannsMono Nerd Font", style = "Regular" }
+# bold = { family = "ComicShannsMono Nerd Font", style = "Bold" }
+# italic = { family = "ComicShannsMono Nerd Font", style = "Italic" }
+# bold_italic = { family = "ComicShannsMono Nerd Font", style = "Bold Italic" }
