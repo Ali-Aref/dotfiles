@@ -98,11 +98,9 @@
 			"",
 			"export default $1",
 			"",
-			"const styles = StyleSheet.create({",
-      "\tcontainer: {",
-      "\t\t$3",
-      "\t}",
-      "});"
+			"const styles = StyleSheet.create((theme)=>({",
+      "\tcontainer: {$3},",
+      "}));"
 		]
 	},
 	"unistyle_component_with_props": {
@@ -124,11 +122,9 @@
 			"",
 			"export default $1",
 			"",
-			"const styles = StyleSheet.create({",
-      "\tcontainer: {",
-      "\t\t$3",
-      "\t}",
-      "});"
+			"const styles = StyleSheet.create((theme)=>({",
+      "\tcontainer: {$3},",
+      "}));"
 		]
 	}
 }
