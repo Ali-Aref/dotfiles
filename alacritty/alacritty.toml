@@ -18,12 +18,12 @@ blur = true  # macos or kde wyland
 history = 1000
 
 [font]
-size = 12.5
-offset = { x = 0, y = 0 }
-normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
-italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
-bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+# size = 12.5
+# offset = { x = 0, y = 0 }
+# normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+# bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+# italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+# bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 
 # size = 13
 # offset = { x = 0, y = 0 }
@@ -32,12 +32,12 @@ bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 # italic = { family = "Iosevka Nerd Font", style = "Italic" }
 # bold_italic = { family = "Iosevka Nerd Font", style = "Bold Italic" }
 
-# size = 12.5
-# offset = { x = 0, y = -1 }
-# normal = { family = "Berkeley Mono Variable", style = "Regular" }
-# bold = { family = "Berkeley Mono Variable", style = "Bold" }
-# italic = { family = "Berkeley Mono Variable", style = "Italic" }
-# bold_italic = { family = "Berkeley Mono Variable", style = "Bold Italic" }
+size = 12.5
+offset = { x = 0, y = 0 }
+normal = { family = "Berkeley Mono Variable", style = "Regular" }
+bold = { family = "Berkeley Mono Variable", style = "Bold" }
+italic = { family = "Berkeley Mono Variable", style = "Oblique" }
+bold_italic = { family = "Berkeley Mono Variable", style = "Bold Oblique" }
 
 # size = 12
 # offset = { x = 0, y = 0 }
