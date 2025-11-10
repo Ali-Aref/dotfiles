@@ -28,7 +28,7 @@ return {
 					loops = {},
 					functions = { "bold" },
 					keywords = {},
-					strings = { "italic" },
+					strings = { "bold" },
 					variables = {},
 					numbers = { "italic" },
 					booleans = { "bold", "italic" },
