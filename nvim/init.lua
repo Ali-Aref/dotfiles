@@ -11,4 +11,7 @@ require("config.opts")
 -- gruvbox-material
 
 -- Project-specific colorscheme setup
-require("config.project-theme").setup()
+-- This will be configured via lazy.nvim plugin manager after moving the plugin
+-- require("project-based-colorscheme").setup({
+--   default_colorscheme = "catppuccin-mocha",
+-- })
