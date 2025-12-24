@@ -32,4 +32,7 @@ require("lazy").setup({
   install = { colorscheme = {} },
   -- automatically check for plugin updates
   checker = { enabled = false },
+  rocks = {
+    server = 'https://lumen-oss.github.io/rocks-binaries/',
+  },
 })
