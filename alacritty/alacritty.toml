@@ -1,9 +1,9 @@
 [general]
 # import = [ "~/.config/alacritty/themes/themes/citylights.toml" ]
-# import = [ "~/.config/alacritty/themes/themes/gruvbox_dark.toml" ]
+import = [ "~/.config/alacritty/themes/themes/gruvbox_dark.toml" ]
 # import = [ "~/.config/alacritty/themes/themes/nordic.toml" ]
 # import = [ "~/.config/alacritty/themes/themes/breeze.toml" ]
-import = [ "~/.config/alacritty/themes/themes/catppuccin_mocha.toml" ]
+# import = [ "~/.config/alacritty/themes/themes/catppuccin_mocha.toml" ]
 
 [terminal.shell]
 program = "/bin/zsh"
@@ -11,8 +11,8 @@ args = ["--login"]
 
 
 [window]
-opacity = 0.8
-blur = true  # macos or kde wyland
+opacity = 1
+blur = false  # macos or kde wyland
 
 [scrolling]
 history = 1000
