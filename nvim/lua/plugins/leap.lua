@@ -1,6 +1,6 @@
 return {
 	{
-		"ggandor/leap.nvim",
+		"https://codeberg.org/andyg/leap.nvim",
 		event = "VeryLazy",
 		config = function()
 			vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap)", { desc = "Leap forward/backward" })

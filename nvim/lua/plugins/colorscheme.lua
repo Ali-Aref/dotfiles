@@ -50,7 +50,7 @@ return {
 				integrations = {
 					cmp = true,
 					gitsigns = true,
-					nvimtree = false,
+					nvimtree = true,
 					treesitter = true,
 					notify = false,
 					mini = {
@@ -100,7 +100,7 @@ return {
 					vim.cmd([[highlight NormalFloat guibg=none]])
 					vim.cmd([[highlight FloatBorder guifg=none guibg=none]])
 					-- Remove terminal borders
-					vim.cmd([[highlight TerminalBorder guifg=none guibg=none]])
+					-- vim.cmd([[highlight TerminalBorder guifg=none guibg=none]])
 				end,
 			})
 		end,

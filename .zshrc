@@ -136,22 +136,15 @@ export PATH=$HOME/.local/share/nvim/mason/bin:$PATH
 alias batinfo="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias tm="tmux"
 
-alias cc="clear"
 alias :q="exit"
 alias :q!="exit"
 alias vi="vim"
 alias nv="nvim"
 alias lg="lazygit"
-alias nano="vim"
-alias dir="echo 'We don't do this here :D'"
 alias please="sudo"
 alias pb="bash ~/.config/polybar/launch.sh"
 alias cc-pacman="sudo pacman -Rns $(pacman -Qtdq)"
-# copy and paste
-alias xc="xclip -selection clipboard"
-alias xp="xclip -o -selection clipboard"
 # Development
-alias cdpr="cd ~/Projects/"
 alias sua="source env/bin/activate"
 alias dua="deactivate"
 alias pmr="python manage.py runserver"

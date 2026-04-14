@@ -1,5 +1,4 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
-local lspconfig = require("lspconfig")
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",
@@ -10,14 +9,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
 		vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
 		vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-		vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
 		vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-		vim.keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 		vim.keymap.set({ "n", "x" }, "<leader>bF", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
 		vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 		vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
 		vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", opts)
 		vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", opts)
+		-- vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts) -- default to grr
+		-- vim.keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts) -- default to grn
 	end,
 })
 
@@ -32,35 +31,25 @@ capabilities.workspace.fileOperations = {
 }
 
 -- lua_ls
-lspconfig.lua_ls.setup({
-	capabilities = capabilities,
-})
+vim.lsp.config("lua_ls", {})
 
 -- tsserver
-lspconfig.ts_ls.setup({
-	capabilities = capabilities,
-})
+vim.lsp.config("ts_ls", {})
 
 -- eslint-ls
-lspconfig.eslint.setup({
-	capabilities = capabilities,
-	root_dir = lspconfig.util.root_pattern(
-		".eslintrc", -- ESLint config file
-		".eslintrc.json", -- JSON ESLint config
-		".eslintrc.js", -- JS ESLint config
-		"package.json", -- If eslint is defined in package.json
-		".git" -- Fallback to git root if no ESLint config is found
-	),
+vim.lsp.config("eslint", {
+	root_markers = { ".eslintrc", ".eslintrc.json", ".eslintrc.js", "package.json", ".git" },
+  -- Only enable if one of the markers (other than .git) exists
+  condition = function(root_dir)
+      return vim.fs.root(root_dir, { ".eslintrc", ".eslintrc.json", ".eslintrc.js", "package.json" }) ~= nil
+  end,
 })
 
 -- jsonls
-lspconfig.jsonls.setup({
-	capabilities = capabilities,
-})
+vim.lsp.config("jsonls", {})
 
 -- tailwindcss
-lspconfig.tailwindcss.setup({
-	capabilities = capabilities,
+vim.lsp.config("tailwindcss", {
 	settings = {
 		tailwindCSS = {
 			classAttributes = { "class", "className", "class:list", "classList", "ngClass", "style" },
@@ -86,8 +75,7 @@ lspconfig.tailwindcss.setup({
 })
 
 -- pylsp
-lspconfig.pylsp.setup({
-	capabilities = capabilities,
+vim.lsp.config("pylsp", {
 	settings = {
 		pylsp = {
 			plugins = {
@@ -108,12 +96,9 @@ lspconfig.pylsp.setup({
 })
 
 -- clang
-lspconfig.clangd.setup({
-	capabilities = capabilities,
-})
+vim.lsp.config("clangd", {})
 
-lspconfig.emmet_language_server.setup({
-	capabilities = capabilities,
+vim.lsp.config("emmet_language_server", {
 	filetypes = {
 		"css",
 		"eruby",
@@ -151,21 +136,37 @@ lspconfig.emmet_language_server.setup({
 })
 
 -- kotlin lsp
-require("lspconfig").kotlin_language_server.setup({
-  cmd = { "kotlin-language-server" },
-  init_options = {
-    storagePath = "/home/ali/.cache/kotlin-language-server"
-  },
-  filetypes = { "kotlin" },
-  capabilities = capabilities,
-  root_dir = lspconfig.util.root_pattern(
-    ".git",
-    "pom.xml",
-    "build.xml",
-    "build.gradle",
-    "settings.gradle",
-    "build.gradle.kts",
-    "settings.gradle.kts"
-  ),
+vim.lsp.config("kotlin_language_server", {
+	cmd = { "kotlin-language-server" },
+	init_options = {
+		storagePath = "/home/ali/.cache/kotlin-language-server",
+	},
+	filetypes = { "kotlin" },
+	root_markers = {
+		".git",
+		"pom.xml",
+		"build.xml",
+		"build.gradle",
+		"settings.gradle",
+		"build.gradle.kts",
+		"settings.gradle.kts"
+	},
 })
 
+-- global lsp config
+vim.lsp.config("*", {
+  capabilities = capabilities,
+})
+
+
+vim.lsp.enable({
+	"lua_ls",
+	"ts_ls",
+	"eslint",
+	"jsonls",
+	"tailwindcss",
+	"pylsp",
+	"clangd",
+	"emmet_language_server",
+	"kotlin_language_server",
+})
