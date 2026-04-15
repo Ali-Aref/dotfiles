@@ -47,10 +47,13 @@ vim.diagnostic.config {
 }
 
 
-
--- vertical split
-vim.opt.fillchars:append('vert: ')
-vim.opt.fillchars = { vert = ' ' }
+-- split borders
+vim.opt.fillchars:append({
+  vert = " ",
+  horiz = " ",
+  horizup = " ",
+  horizdown = " ",
+})
 
 -- shift+k border
 local orig_open_floating_preview = vim.lsp.util.open_floating_preview

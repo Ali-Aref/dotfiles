@@ -21,10 +21,11 @@ return {
     config = function()
       require("codex").setup({
         split = "vertical", -- "horizontal" | "vertical"
+        vertical_side = "right", -- "left" | "right"
         size = 0.3,
         codex_cmd = { "codex" },
         focus_after_send = false,
-        escape_codex = "jj", -- optional: Terminal-mode lhs to send <C-\><C-n> (omit to disable)
+        escape_codex = "<C-h>", -- optional: Terminal-mode lhs to send <C-\><C-n> (omit to disable)
       })
     end,
   },
