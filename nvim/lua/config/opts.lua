@@ -50,9 +50,9 @@ vim.diagnostic.config {
 -- split borders
 vim.opt.fillchars:append({
   vert = " ",
-  horiz = " ",
-  horizup = " ",
-  horizdown = " ",
+--   horiz = " ",
+--   horizup = " ",
+--   horizdown = " ",
 })
 
 -- shift+k border
