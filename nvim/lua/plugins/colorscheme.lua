@@ -91,14 +91,13 @@ return {
 				callback = function()
 					-- Remove split borders
 					vim.cmd([[highlight WinSeparator guifg=none guibg=none]])
-					-- Remove completion menu borders
-					vim.cmd([[highlight Pmenu guibg=none]])
-					vim.cmd([[highlight PmenuSel guibg=#504945]])
-					vim.cmd([[highlight PmenuSbar guibg=none]])
-					vim.cmd([[highlight PmenuThumb guibg=#504945]])
-					-- Remove floating window borders
+					-- -- Remove completion menu borders
+					-- vim.cmd([[highlight Pmenu guibg=none]])
+					-- vim.cmd([[highlight PmenuSel guibg=#504945]])
+					-- vim.cmd([[highlight PmenuSbar guibg=none]])
+					-- vim.cmd([[highlight PmenuThumb guibg=#504945]])
 					vim.cmd([[highlight NormalFloat guibg=none]])
-					vim.cmd([[highlight FloatBorder guifg=none guibg=none]])
+					vim.cmd([[highlight FloatBorder guifg=#a89984 guibg=none]])
 					-- Remove terminal borders
 					-- vim.cmd([[highlight TerminalBorder guifg=none guibg=none]])
 				end,

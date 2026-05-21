@@ -5,6 +5,9 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
 vim.opt.termguicolors = true
 
+-- Neovim 0.11+: nvim-cmp bordered() uses this when border isn't set explicitly
+vim.o.winborder = "rounded"
+
 -- tabs
 vim.o.tabstop = 2 -- Set tab spacing to 2 spaces
 vim.o.shiftwidth = 2 -- Set the number of spaces used for each level of indentation
