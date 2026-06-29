@@ -1,7 +1,7 @@
 [user]
 	name = Ali Aref
 	email = aliaref.dev@gmail.com
-	signingkey = 3C376D3B4B2DE304
+	signingkey = 6A9D2488A15937E8
 [core]
 	editor = nvim
 	compression = 0
