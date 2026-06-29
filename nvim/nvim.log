@@ -1,0 +1,6 @@
+WRN 2026-05-21T12:15:57.545 ?.995999   socket_watcher_start:177: Failed to remove stale socket /run/user/1000/nvim.995999.0: no such file or directory
+WRN 2026-05-21T12:15:57.545 ?.995999   server_start:197: Failed to start server: no such file or directory: /run/user/1000/
+WRN 2026-05-21T12:15:57.606 ?.995999   socket_watcher_start:177: Failed to remove stale socket /run/user/1000/fzf-lua.1779349557.995999.1: no such file or directory
+WRN 2026-05-21T12:15:57.606 ?.995999   server_start:197: Failed to start server: no such file or directory: /run/user/1000/
+WRN 2026-06-20T08:54:35.508 c/nvim.244363.0 server_start:197: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
+WRN 2026-06-20T08:54:35.523 c/nvim.244363.0 server_start:197: Failed to start server: operation not permitted: /run/user/1000/fzf-lua.1781929475.2.1
