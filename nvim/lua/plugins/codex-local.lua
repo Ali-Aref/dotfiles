@@ -1,6 +1,6 @@
 return {
   {
-    dir = "/home/ali/Projects/other/codex.nvim",
+    dir = "/home/ali/Projects/etc/codex.nvim",
     name = "codex.nvim",
     keys = {
       {
@@ -20,9 +20,12 @@ return {
     },
     config = function()
       require("codex").setup({
-        split = "vertical", -- "horizontal" | "vertical"
-        vertical_side = "right", -- "left" | "right"
-        size = 0.3,
+        split = "float", -- "horizontal" | "vertical" | "float"
+        float = {
+          width = 0.9,
+          height = 0.85,
+          border = "rounded",
+        },
         codex_cmd = { "codex" },
         focus_after_send = false,
         escape_codex = "<C-h>", -- optional: Terminal-mode lhs to send <C-\><C-n> (omit to disable)
