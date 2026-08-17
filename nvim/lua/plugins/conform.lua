@@ -18,7 +18,7 @@ return {
 			},
 			formatters = {
 				prettier = {
-					prepend_args = { "--print-width", "75" },
+					prepend_args = { "--print-width", "80" },
 				},
 				black = {
 					prepend_args = { "--line-length", "75" },
