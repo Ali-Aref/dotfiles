@@ -8,17 +8,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# robbyrussell
-# agnoster
-# arrow
-# darkblood
-# fwalch
-# gallois
-# jonathan
-# nicoulaj
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="fwalch"
-# ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="fwalch"
+# ZSH_THEME="arrow"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -153,6 +145,8 @@ alias pmm="python manage.py makemigrations && python manage.py migrate"
 
 # fun
 alias starwarstory="telnet towel.blinkenlights.nl"
+alias dir="echo \"We don't do this here :D\""
+alias nano="vim"
 
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -165,3 +159,43 @@ export ANDROID_SDK_ROOT="$HOME/Android"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/emulator"
+alias adb-cpu="adb shell getprop ro.product.cpu.abi"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/ali/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# pnpm
+export PNPM_HOME="/home/ali/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+# cursor cli
+export PATH="$HOME/.local/bin:$PATH"
+
+# adb_cup command
+adb_cpu() {
+  local devices
+  devices=($(adb devices | awk 'NR>1 && $2=="device" {print $1}'))
+
+  if [[ ${#devices[@]} -eq 0 ]]; then
+    echo "No devices/emulators connected." >&2
+    return 1
+  fi
+
+  local serial abi version model
+  for serial in "${devices[@]}"; do
+    abi=$(adb -s "$serial" shell getprop ro.product.cpu.abi | tr -d '\r')
+    version=$(adb -s "$serial" shell getprop ro.build.version.release | tr -d '\r')
+    model=$(adb -s "$serial" shell getprop ro.product.model | tr -d '\r')
+
+    echo "Device:  $serial ($model)"
+    echo "Android: $version"
+    echo "ABI:     $abi"
+    echo "---"
+  done
+}
