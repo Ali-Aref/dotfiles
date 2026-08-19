@@ -1,7 +1,7 @@
 [user]
 	name = Ali Aref
 	email = aliaref.dev@gmail.com
-	signingkey = 6A9D2488A15937E8
+	signingkey = 1B4FE8A7CB66777A
 [core]
 	editor = nvim
 	compression = 0
@@ -14,8 +14,3 @@
 	gpgsign = true
 [tag]
 	gpgsign = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
