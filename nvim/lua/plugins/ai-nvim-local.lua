@@ -1,6 +1,6 @@
 return {
   {
-    dir = "/home/ali/Projects/etc/codex.nvim",
+    dir = "/home/ali/Projects/etc/ai-nvim",
     name = "ai-nvim",
     keys = {
       {
