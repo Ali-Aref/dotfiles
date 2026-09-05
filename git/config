@@ -1,7 +1,8 @@
 [user]
 	name = Ali Aref
 	email = aliaref.dev@gmail.com
-	signingkey = 1B4FE8A7CB66777A
+	; signingkey = 1B4FE8A7CB66777A ; dell-7340
+	signingkey = 6A9D2488A15937E8 ; dell-7420
 [core]
 	editor = nvim
 	compression = 0
