@@ -2,6 +2,7 @@ return {
 	"numToStr/FTerm.nvim",
 	event = "VeryLazy",
 	opts = {
+		border = "rounded",
 		dimensions = {
 			height = 0.8,
 			width = 0.8,
@@ -20,6 +21,7 @@ return {
 
 		local lazyGit = fterm:new({
 			cmd = "lazygit",
+			border = "rounded",
 			dimensions = {
 				height = 0.9,
 				width = 0.9,
@@ -29,6 +31,7 @@ return {
 		})
 		local btop = fterm:new({
 			cmd = "btop",
+			border = "rounded",
 			dimensions = {
 				height = 0.9,
 				width = 0.9,
@@ -36,6 +39,7 @@ return {
 		})
 		local openCode = fterm:new({
 			cmd = "opencode",
+			border = "rounded",
 			dimensions = {
 				height = 0.9,
 				width = 0.9,
@@ -44,6 +48,7 @@ return {
 			},
 		})
 		local bterm = fterm:new({
+			border = "rounded",
 			dimensions = {
 				height = 0.4,
 				width = 1,
@@ -60,6 +65,7 @@ return {
         if exec ~= nil then
             fterm.scratch({
               cmd = { exec, buf },
+              border = "rounded",
               dimensions = {
                 height = 0.4,
                 width = 1,
