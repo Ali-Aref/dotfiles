@@ -33,8 +33,34 @@ capabilities.workspace.fileOperations = {
 -- lua_ls
 vim.lsp.config("lua_ls", {})
 
--- tsserver
-vim.lsp.config("ts_ls", {})
+-- use project typescript for lsp
+vim.lsp.config("tsc_lsp", {
+	cmd = function(dispatchers, config)
+		local cmd = vim.fs.joinpath(config.root_dir, "node_modules", ".bin", "tsc")
+
+		if vim.fn.executable(cmd) ~= 1 then
+			vim.notify("TypeScript 7 is not installed in " .. config.root_dir, vim.log.levels.ERROR)
+			return
+		end
+
+		return vim.lsp.rpc.start({ cmd, "--lsp", "--stdio" }, dispatchers)
+	end,
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
+	root_markers = {
+		"package-lock.json",
+		"pnpm-lock.yaml",
+		"yarn.lock",
+		"bun.lock",
+		"bun.lockb",
+		"package.json",
+		".git",
+	},
+})
 
 -- eslint-ls
 vim.lsp.config("eslint", {
@@ -161,7 +187,7 @@ vim.lsp.config("*", {
 
 vim.lsp.enable({
 	"lua_ls",
-	"ts_ls",
+	"tsc_lsp",
 	"eslint",
 	"jsonls",
 	"tailwindcss",
