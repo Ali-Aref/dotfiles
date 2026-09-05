@@ -34,15 +34,15 @@ return {
 				width = 0.9,
 			},
 		})
-		-- local codex = fterm:new({
-		-- 	cmd = "codex",
-		-- 	dimensions = {
-		-- 		height = 1.0,
-		-- 		width = 0.35,
-		--       x = 0.95,
-		--       y = 1,
-		-- 	},
-		-- })
+		local openCode = fterm:new({
+			cmd = "opencode",
+			dimensions = {
+				height = 0.9,
+				width = 0.9,
+        -- x = 0.95,
+        -- y = 1,
+			},
+		})
 		local bterm = fterm:new({
 			dimensions = {
 				height = 0.4,
@@ -81,8 +81,8 @@ return {
     -- bottom term
 		vim.keymap.set("n", "<A-b>", function() bterm:toggle() end, { desc = "Bottom Term" })
 		vim.keymap.set("t", "<A-b>", function() bterm:toggle() end, { desc = "Bottom Term" })
-		--   -- codex
-		-- vim.keymap.set("n", "<A-e>", function() codex:toggle() end, { desc = "Codex" })
-		-- vim.keymap.set("t", "<A-e>", function() codex:toggle() end, { desc = "Codex" })
+		-- OpenCode
+		vim.keymap.set("n", "<A-e>", function() openCode:toggle() end, { desc = "OpenCode" })
+		vim.keymap.set("t", "<A-e>", function() openCode:toggle() end, { desc = "OpenCode" })
 	end,
 }
