@@ -36,14 +36,22 @@ vim.lsp.config("lua_ls", {})
 -- use project typescript for lsp
 vim.lsp.config("tsc_lsp", {
 	cmd = function(dispatchers, config)
-		local cmd = vim.fs.joinpath(config.root_dir, "node_modules", ".bin", "tsc")
+		local bin = vim.fs.joinpath(config.root_dir, "node_modules", ".bin")
+		local cmd = vim.fs.joinpath(bin, "tsc")
 
-		if vim.fn.executable(cmd) ~= 1 then
-			vim.notify("TypeScript 7 is not installed in " .. config.root_dir, vim.log.levels.ERROR)
-			return
+		if vim.fn.executable(cmd) == 1 then
+			local major = tonumber(vim.fn.system({ cmd, "--version" }):match("Version (%d+)"))
+			if major and major >= 7 then
+				return vim.lsp.rpc.start({ cmd, "--lsp", "--stdio" }, dispatchers)
+			end
 		end
 
-		return vim.lsp.rpc.start({ cmd, "--lsp", "--stdio" }, dispatchers)
+		-- ponytail: TypeScript <7 has no native LSP; use the already-installed wrapper.
+		local fallback = vim.fs.joinpath(bin, "typescript-language-server")
+		if vim.fn.executable(fallback) ~= 1 then
+			fallback = "typescript-language-server"
+		end
+		return vim.lsp.rpc.start({ fallback, "--stdio" }, dispatchers)
 	end,
 	filetypes = {
 		"javascript",
