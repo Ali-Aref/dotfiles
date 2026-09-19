@@ -28,7 +28,7 @@ return {
 				width = 30,
 				side = "left", -- left, right
 				float = {
-					enable = false, -- floating
+					enable = true, -- floating
 					open_win_config = {
 						relative = "editor",
 						border = "rounded",
